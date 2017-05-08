@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "内存监测插件",
+  "version": "1.0",
+//  "default_locale": "en",
+  "description": "监测一个页面所占用的内存，如果超过了所设置的值，就刷新一下页面。",
+  //插件相关图标文件的位置
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  //指定扩展的图标放在Chrome的工具栏中
+  "browser_action": {
+    //定义了相应图标文件的位置
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    //定义了当用户鼠标悬停于扩展图标上所显示的文字
+    "default_title": "内存监测",
+    //定义了当用户单击扩展图标时所显示页面的文件位置
+    "default_popup": "popup.html"
+  },
+  //声明需要跨域的权限
+  //小提示：如果想在用户打开浏览器之前就让扩展运行，可以在Manifest的permissions属性中加入"background"，但除非必要，否则尽量不要这么做，因为大部分用户不喜欢这样。
+  "permissions": [
+    //开启内存读取取权限
+    "system.memory"
+  ]
+}
